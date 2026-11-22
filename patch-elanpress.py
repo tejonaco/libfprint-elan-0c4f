@@ -46,9 +46,9 @@ def patch_elanpress_file(path):
         text = re.sub(r'0x0c6e', '0x0c4f', text, flags=re.IGNORECASE)
         print(f"[PATCH] {path}: mapped PID 0x0c6e -> 0x0c4f")
 
-    # Adjust match/threshold from 12 to 8 (compensate for 80x80 = 6400px area)
-    text = re.sub(r'(#define\s+\w*MATCH\w*\s+)12\b', r'\g<1>8', text)
-    text = re.sub(r'(#define\s+\w*THRESHOLD\w*\s+)12\b', r'\g<1>8', text)
+    # Adjust match/threshold from 12 to 6 (compensate for 80x80 = 6400px area)
+    text = re.sub(r'(#define\s+\w*MATCH\w*\s+)12\b', r'\g<1>6', text)
+    text = re.sub(r'(#define\s+\w*THRESHOLD\w*\s+)12\b', r'\g<1>6', text)
 
     if text != orig:
         with open(path, "w") as f:

@@ -1,6 +1,6 @@
 # Maintainer: tejonaco: tejonaco@gmail.com
 pkgname=libfprint-elan-0c4f-elanpress-git
-pkgver=1.94.10.r16.gfa2f98f
+pkgver=1.94.10.r21.gfa2f98f
 pkgrel=1
 pkgdesc="libfprint patch for Elan 04f3:0c4f (80x80)"
 arch=('x86_64')
